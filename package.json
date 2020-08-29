@@ -1,0 +1,24 @@
+{
+  "name": "weather_station_ws_server",
+  "version": "0.0.3008",
+  "description": "weather station websocket server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciobania/weather_station_ws_server.git"
+  },
+  "keywords": [
+    "weather",
+    "station",
+    "websocket"
+  ],
+  "author": "Adrian Ciobanita",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ciobania/weather_station_ws_server/issues"
+  },
+  "homepage": "https://github.com/ciobania/weather_station_ws_server#readme"
+}
