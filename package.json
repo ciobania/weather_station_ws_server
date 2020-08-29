@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/ciobania/weather_station_ws_server/issues"
   },
-  "homepage": "https://github.com/ciobania/weather_station_ws_server#readme"
+  "homepage": "https://github.com/ciobania/weather_station_ws_server#readme",
+  "dependencies": {
+    "ws": "^7.3.1"
+  }
 }
