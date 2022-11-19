@@ -1,0 +1,13 @@
+https://codeforgeek.com/render-html-file-expressjs/
+https://stackoverflow.com/questions/22429744/how-to-setup-route-for-websocket-server-in-express
+https://lastminuteengineers.com/esp32-ntp-server-date-time-tutorial/
+
+https://jsfiddle.net/BlackLabel/tgahn7yv
+https://www.highcharts.com/forum/viewtopic.php?t=41518
+http://jsfiddle.net/Pmilan/xychoq4d/66/
+https://api.highcharts.com/highcharts/xAxis.dateTimeLabelFormats
+
+
+
+# issues with new nodemcu v3 lolin board on arch linux due to braille tty udev rule
+https://forum.manjaro.org/t/cant-connect-serial-port-error-ch341-uart-disconnected-from-ttyusb0/87208

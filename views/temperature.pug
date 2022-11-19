@@ -1,0 +1,88 @@
+doctype html
+html(lang='en')
+  head
+    title [== TemperatureStation ==]
+    link(rel='stylesheet', href='../static/css/charts.css')
+    //link(rel='stylesheet', href='../static/js/highcharts.js')
+    script(type='text/javascript', src='https://code.highcharts.com/highcharts.js')
+    script(type='text/javascript', src='https://code.highcharts.com/modules/exporting.js')
+    script(type='text/javascript', src='https://code.highcharts.com/modules/export-data.js')
+    script(type='text/javascript', src='https://code.highcharts.com/modules/accessibility.js')
+  body
+    h1 Welcome
+    p
+    a(href="javascript:window.history.back();") Back
+    br
+    hr
+    figure(class="highcharts-figure")
+    div(id="container")
+    p(class="highcharts-description") This chart shows how data labels can be added to the data series. This can increase readability and comprehension for small datasets.
+    br
+    script.
+      let dataLivingRoom = !{livingRoom};
+      let dataMasterBedroom = !{masterBedroom};
+      dataLivingRoom.forEach(function (point) {
+        point[0] = Date.parse(point[0])
+      });
+      dataMasterBedroom.forEach(function (point) {
+        point[0] = Date.parse(point[0])
+      });
+      Highcharts.chart('container', {
+        chart: {
+          type: 'spline'
+        },
+        title: {
+          text: 'Daily Temperature - Every 15 minutes'
+        },
+        subtitle: {
+          text: 'Source: ESP32'
+        },
+        xAxis: {
+          type: 'datetime',
+          //	tickInterval: 60 * 1000, //if you want thin step
+          dateTimeLabelFormats: {
+            year: '%H:%M:%S %p',
+            month: '%H:%M:%S %p',
+            day: '%H:%M:%S %p',
+            hour: "%H:%M:%S %p",
+            minute: "%H:%M:%S %p"
+            // year: '%I:%M:%S %p',
+            // month: '%I:%M:%S %p',
+            // day: '%I:%M:%S %p'
+          },
+        },
+        yAxis: {
+          title: {
+            text: 'Temperature (°C)'
+          },
+          min: 15
+        },
+        tooltip: {
+          headerFormat: '<b>{series.name}</b><br>',
+          pointFormat: '{point.x:%e. %b}: {point.y:.2f} (°C)'
+        },
+        plotOptions: {
+          series: {
+            marker: {
+              enabled: true
+            }
+          }
+        },
+        // plotOptions: {
+        //   line: {
+        //     dataLabels: {
+        //       enabled: true
+        //     },
+        //     enableMouseTracking: true
+        //   }
+        // },
+        series: [{
+          name: 'Master bedroom',
+          data: dataMasterBedroom
+        },
+          {
+          name: 'Living room',
+          data: dataLivingRoom
+        }
+        ]
+      });

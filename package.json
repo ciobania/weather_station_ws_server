@@ -4,6 +4,8 @@
   "description": "weather station websocket server",
   "main": "index.js",
   "scripts": {
+    "dev": "node_modules/nodemon/bin/nodemon.js index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +24,12 @@
   },
   "homepage": "https://github.com/ciobania/weather_station_ws_server#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "express-pug": "^1.0.0",
+    "mongoose": "^5.10.2",
+    "node-uuid": "^1.4.8",
+    "nodemon": "^2.0.4",
+    "pug": "^3.0.0",
     "ws": "^7.3.1"
   }
 }

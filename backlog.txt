@@ -1,0 +1,8 @@
+v0.0.1:30082020
+ - timestamp is not saved in DB - fixed
+ - timestamp is not saved as it was sent, but converted to date: need to change DB field, and replay all the events again
+ - include bootCount in the message
+ - create separate table for devices, to reference back? what if the allocation changes?
+ - add OTA support?
+ - add highcharts or connect mongodb to grafana?
+ - add DNS entry in PiHole to serve it from
